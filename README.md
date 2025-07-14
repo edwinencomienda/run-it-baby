@@ -1,11 +1,10 @@
-
 # Pint Helper
 
 A VS Code extension that executes a command on file save.
 
 ## Features
 
-*   Executes a configurable command every time a file is saved.
+- Executes a configurable command every time a file is saved.
 
 ## Requirements
 
@@ -15,7 +14,7 @@ There are no special requirements for this extension.
 
 This extension contributes the following settings:
 
-*   `pint-helper.commands`: An array of commands to execute on file save. The default is `[]`.
+- `pint-helper.commands`: An array of commands to execute on file save. The default is `[]`.
 
 ## Usage
 
@@ -32,7 +31,17 @@ This extension contributes the following settings:
     ]
     ```
 
-4.  Replace `"your-command-here"` with the command you want to execute, and `["language-id-1", "language-id-2"]` with the languages you want this command to apply to.
+4.  Replace `"your-command-here"` with the command you want to execute, and `["language-id-1", "language-id-2"]` with the languages you want this command to apply to. You can use `{filePath}` to represent the path to the saved file and `{rootPath}` to represent the path to the workspace root. For example, to run `pint` on PHP files, you would use the following configuration:
+
+    ```json
+    "pint-helper.commands": [
+      {
+        "command": "./vendor/bin/pint {filePath}",
+        "languages": ["php"]
+      }
+    ]
+    ```
+
 5.  Save a file to trigger the command.
 
 ## Known Issues

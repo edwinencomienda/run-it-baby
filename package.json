@@ -11,10 +11,17 @@
     "Other"
   ],
   "activationEvents": [
-    "onStartupFinished"
+    "onStartupFinished",
+    "onCommand:pint-helper.helloWorld"
   ],
   "main": "./out/extension.js",
   "contributes": {
+    "commands": [
+      {
+        "command": "pint-helper.helloWorld",
+        "title": "Hello World"
+      }
+    ],
     "configuration": {
       "title": "Pint Helper",
       "properties": {
