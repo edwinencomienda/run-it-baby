@@ -31,12 +31,17 @@ This extension contributes the following settings:
     ]
     ```
 
-4.  Replace `"your-command-here"` with the command you want to execute, and `["language-id-1", "language-id-2"]` with the languages you want this command to apply to. You can use `{filePath}` to represent the path to the saved file and `{rootPath}` to represent the path to the workspace root. For example, to run `pint` on PHP files, you would use the following configuration:
+4.  **Variable Placeholders**: You can use the following placeholders within your `command` string:
+
+    - `{filePath}`: Will be replaced with the absolute path of the file that was saved.
+    *   `{projectRootPath}`: Will be replaced with the absolute path of the current VS Code workspace folder.
+
+    Replace `"your-command-here"` with the command you want to execute, and `["language-id-1", "language-id-2"]` with the languages you want this command to apply to. For example, to run `pint` on PHP files, you would use the following configuration:
 
     ```json
     "run-it-baby.commands": [
       {
-        "command": "./vendor/bin/pint {filePath}",
+        "command": "{projectRootPath}/vendor/bin/pint {filePath}",
         "languages": ["php"]
       }
     ]

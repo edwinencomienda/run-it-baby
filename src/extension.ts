@@ -29,7 +29,7 @@ export function activate(context: vscode.ExtensionContext) {
       if (languages.includes(document.languageId)) {
         let processedCommand = command.replace(/\{filePath\}/g, document.fileName);
         if (vscode.workspace.workspaceFolders && vscode.workspace.workspaceFolders.length > 0) {
-          processedCommand = processedCommand.replace(/\{rootPath\}/g, vscode.workspace.workspaceFolders[0].uri.fsPath);
+          processedCommand = processedCommand.replace(/\{projectRootPath\}/g, vscode.workspace.workspaceFolders[0].uri.fsPath);
         }
 
         outputChannel.appendLine(`Executing command: ${processedCommand}`);

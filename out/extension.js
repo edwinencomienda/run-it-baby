@@ -21,7 +21,7 @@ function activate(context) {
             if (languages.includes(document.languageId)) {
                 let processedCommand = command.replace(/\{filePath\}/g, document.fileName);
                 if (vscode.workspace.workspaceFolders && vscode.workspace.workspaceFolders.length > 0) {
-                    processedCommand = processedCommand.replace(/\{rootPath\}/g, vscode.workspace.workspaceFolders[0].uri.fsPath);
+                    processedCommand = processedCommand.replace(/\{projectRootPath\}/g, vscode.workspace.workspaceFolders[0].uri.fsPath);
                 }
                 outputChannel.appendLine(`Executing command: ${processedCommand}`);
                 (0, child_process_1.exec)(processedCommand, (err, stdout, stderr) => {
