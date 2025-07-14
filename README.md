@@ -1,6 +1,6 @@
-# Pint Helper
+# Run It Baby
 
-A VS Code extension that executes a command on file save.
+A VS Code extension that executes commands on file save.
 
 ## Features
 
@@ -14,7 +14,7 @@ There are no special requirements for this extension.
 
 This extension contributes the following settings:
 
-- `pint-helper.commands`: An array of commands to execute on file save. The default is `[]`.
+- `run-it-baby.commands`: An array of commands to execute on file save. The default is `[]`.
 
 ## Usage
 
@@ -23,7 +23,7 @@ This extension contributes the following settings:
 3.  Add the following setting to configure the commands to be executed:
 
     ```json
-    "pint-helper.commands": [
+    "run-it-baby.commands": [
       {
         "command": "your-command-here",
         "languages": ["language-id-1", "language-id-2"]
@@ -34,7 +34,7 @@ This extension contributes the following settings:
 4.  Replace `"your-command-here"` with the command you want to execute, and `["language-id-1", "language-id-2"]` with the languages you want this command to apply to. You can use `{filePath}` to represent the path to the saved file and `{rootPath}` to represent the path to the workspace root. For example, to run `pint` on PHP files, you would use the following configuration:
 
     ```json
-    "pint-helper.commands": [
+    "run-it-baby.commands": [
       {
         "command": "./vendor/bin/pint {filePath}",
         "languages": ["php"]
@@ -52,4 +52,4 @@ There are no known issues at this time.
 
 ### 0.0.1
 
-Initial release of Pint Helper.
+Initial release of Run It Baby.

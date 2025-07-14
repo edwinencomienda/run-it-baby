@@ -1,8 +1,8 @@
 
 {
-  "name": "pint-helper",
-  "displayName": "pint-helper",
-  "description": "A helper for pint",
+  "name": "run-it-baby",
+  "displayName": "Run It Baby",
+  "description": "A VS Code extension to run commands on file save.",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.89.0"
@@ -12,20 +12,20 @@
   ],
   "activationEvents": [
     "onStartupFinished",
-    "onCommand:pint-helper.helloWorld"
+    "onCommand:run-it-baby.helloWorld"
   ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "pint-helper.helloWorld",
+        "command": "run-it-baby.helloWorld",
         "title": "Hello World"
       }
     ],
     "configuration": {
-      "title": "Pint Helper",
+      "title": "Run It Baby",
       "properties": {
-        "pint-helper.commands": {
+        "run-it-baby.commands": {
           "type": "array",
           "default": [],
           "description": "An array of commands to execute on file save.",

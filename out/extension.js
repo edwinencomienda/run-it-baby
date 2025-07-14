@@ -6,14 +6,14 @@ const vscode = require("vscode");
 const child_process_1 = require("child_process");
 let outputChannel;
 function activate(context) {
-    outputChannel = vscode.window.createOutputChannel('Pint Helper');
-    outputChannel.appendLine('Pint Helper extension is now active.');
-    let disposable = vscode.commands.registerCommand('pint-helper.helloWorld', () => {
-        vscode.window.showInformationMessage('Hello World from pint-helper!');
+    outputChannel = vscode.window.createOutputChannel('Run It Baby');
+    outputChannel.appendLine('Run It Baby extension is now active.');
+    let disposable = vscode.commands.registerCommand('run-it-baby.helloWorld', () => {
+        vscode.window.showInformationMessage('Hello World from Run It Baby!');
     });
     context.subscriptions.push(disposable);
     vscode.workspace.onDidSaveTextDocument((document) => {
-        const commands = vscode.workspace.getConfiguration('pint-helper').get('commands');
+        const commands = vscode.workspace.getConfiguration('run-it-baby').get('commands');
         if (!commands) {
             return;
         }

@@ -10,17 +10,17 @@ interface Command {
 let outputChannel: vscode.OutputChannel;
 
 export function activate(context: vscode.ExtensionContext) {
-  outputChannel = vscode.window.createOutputChannel('Pint Helper');
-  outputChannel.appendLine('Pint Helper extension is now active.');
+  outputChannel = vscode.window.createOutputChannel('Run It Baby');
+  outputChannel.appendLine('Run It Baby extension is now active.');
 
-  let disposable = vscode.commands.registerCommand('pint-helper.helloWorld', () => {
-    vscode.window.showInformationMessage('Hello World from pint-helper!');
+  let disposable = vscode.commands.registerCommand('run-it-baby.helloWorld', () => {
+    vscode.window.showInformationMessage('Hello World from Run It Baby!');
   });
 
   context.subscriptions.push(disposable);
 
   vscode.workspace.onDidSaveTextDocument((document: vscode.TextDocument) => {
-    const commands = vscode.workspace.getConfiguration('pint-helper').get('commands') as Command[];
+    const commands = vscode.workspace.getConfiguration('run-it-baby').get('commands') as Command[];
     if (!commands) {
       return;
     }
