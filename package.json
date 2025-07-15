@@ -5,6 +5,7 @@
   "description": "A VS Code extension to run commands on file save.",
   "version": "0.0.1",
   "publisher": "edwinencomienda",
+  "icon": "icon.png",
   "repository": {
     "type": "git",
     "url": "https://github.com/edwinencomienda/run-it-baby"
