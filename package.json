@@ -4,6 +4,11 @@
   "displayName": "Run It Baby",
   "description": "A VS Code extension to run commands on file save.",
   "version": "0.0.1",
+  "publisher": "edwinencomienda",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/edwinencomienda/run-it-baby"
+  },
   "engines": {
     "vscode": "^1.89.0"
   },
